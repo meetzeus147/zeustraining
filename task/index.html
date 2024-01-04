@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>My first web page</title>
 </head>
 
 <body>
-    <h1>Myfirst web page</h1>
-    <h2>What this is</h2>
+    <h1 class="title">My first web page</h1>
+    <h2 class="heading">What this is</h2>
     <p>Welcome to <em>my first page</em>.I created this web page without the assistance of a web editor.Just my little
         text editor and my keen <strong>understanding of html</strong>.</p>
-    <h2>What this is</h2>
+    <h2 class="heading">What this is</h2>
     <ul>
         <li>To learn html</li>
         <li>List item
@@ -25,12 +26,12 @@
         </li>
         <li>orded and unordered list</li>
     </ul>
-    <h2>Zeus Learning</h2>
+    <h2 class="heading">Zeus Learning</h2>
     <a href="https://www.zeuslearning.com/" target="_blank">This link will open zeus learning in a new tab</a><br>
-    <h2>On click of the following image navigate to google</h2>
+    <h2 class="heading">On click of the following image navigate to google</h2>
     <a href="https://www.google.com/"><img src="google.png"></a>
-    <h3>Some random table</h3>
-    <table border>
+    <h3 class="tableheading">Some random table</h3>
+    <table class="tableinside">
         <tr>
             <td>Row 1 Column 1</td>
             <td>Row 1 Column 2</td>
@@ -52,7 +53,7 @@
             <td>Row 4 Column 3</td>
         </tr>
     </table>
-    <h3>Some random form</h3>
+    <h3 class="formheading">Some random form</h3>
     <form action="">
         <p><Strong>Note</Strong> : It looks the part, but won't do a thing.</p>
         <p>Name : </p>
@@ -63,7 +64,7 @@
         <input type="radio" id="male">
         <label for="male">Male</label><br>
         <input type="radio" id="female">
-        <label for="female">Female</label><br>
+        <label for="female">Female</label><br><br>
         <button type="submit">Submit Query</button>
     </form>
 </body>
