@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+}
+
 .container{
     display: flex;
     justify-content: center;
@@ -9,7 +13,7 @@
     height: 130px;
 }
 
-img{
+.img{
     width: 130px;
     height: 130px ;
 }
@@ -23,10 +27,6 @@ img{
     font-family: 'Roboto', sans-serif;
 }
 
-p{
-    margin: 0;
-}
-
 .tag{
     font-weight: bold;
     margin-bottom: 14px;
@@ -38,7 +38,7 @@ p{
     color: #858991;
 }
 
-svg{
+.svg{
     margin-right: 14px;
 }
 
