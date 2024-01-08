@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="/login-page/Quicksand-VariableFont_wght.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/dashboard/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="header">
+            <img src="/dashboard/logo used in header.svg" alt="quantum">
+            <div class="dashboard nav">DASHBOARD</div>
+            <div class="nav">CONTENT</div>
+            <div class="nav">USERS</div>
+            <div class="nav">REPORTS</div>
+            <div class="nav">ADMIN</div>
+            <div class="nav"><img src="/dashboard/alerts.svg" alt="Alert as image."></div>
+            <div class="nav"><img src="/dashboard/announcements.svg" alt="announcements as image"></div>
+            <div class="nav profile"></div>
+        </div>
+        <div class="main">
+            <div class="course-class-toggle">
+                <div class="courses-toggle">
+                    <img src="/dashboard/courses.svg" alt="courses img">
+                    <div class="courses-nos">4</div>
+                    <div class="courses-toggle-label">Courses</div>
+                </div>
+                <div class="classes-toggle">
+                    <img src="/dashboard/classes.svg" alt="classes img">
+                    <div class="classes-nos">11</div>
+                    <div class="classes-toggle-label">Classes</div>
+                </div>
+            </div>
+            <div class="class-for-line">
+                <div class="filter-panel">
+                    <div class="showing-label">Showing 4 of 4 Courses</div>
+                    <div class="filter-div">
+                        <div class="sort-by-label">Sort By :</div>
+                        <select name="course" id="course" class="courses-select">
+                            <option value="" disabled selected>Cource Name</option>
+                            <option value="">Acceleration</option>
+                            <option value="">Displacement, Velocity and Speed</option>
+                            <option value="">Introduction to Biology: Micro organisms and how they affec...</option>
+                            <option value="">Introduction to High School Mathematics</option>
+                        </select>
+                        <img src="/dashboard/sort.svg" alt="sort img">
+                    </div>
+                </div>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course">
+                        <img src="/dashboard/imageMask.png" alt="" class="course-img">
+                        <div class="courses-details">
+                            <div class="line-1">
+                                <div class="course-name">Acceleration</div> <img class="star"
+                                    src="/dashboard/favourite.svg" alt="">
+                            </div>
+                            <div class="line-2 regular-course-label">
+                                Physics
+                                <div class="pipe">|</div>
+                                Grade
+                                <div class="grade">7</div>
+                                <div class="plus">+2</div>
+                            </div>
+                            <div class="line-3 regular-course-label">
+                                <div class="number-line-2">4</div>
+                                Units
+                                <div class="number-line-2 lm">18</div>
+                                Lessons
+                                <div class="number-line-2 lm">24</div>
+                                Topics
+                            </div>
+                            <select name="" id="" class="course-class-input">
+                                <option value="">Mr. Frank's Class A</option>
+                                <option value="">Mr. Frank's Class B</option>
+                            </select>
+                            <div class="line-4 regular-course-label">
+                                <div>50 Students</div>
+                                <div class="pipe">|</div>
+                                <div>21-Jan-2020</div>
+                                <div class="pipe">-</div>
+                                <div>21-Aug-2020</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courses-icons">
+                        <img src="/dashboard/preview.svg" alt="">
+                        <img src="/dashboard/manage course.svg" alt="">
+                        <img src="/dashboard/grade submissions.svg" alt="">
+                        <img src="/dashboard/reports.svg" alt="">
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course">
+                        <img src="/dashboard/imageMask-1.png" alt="" class="course-img">
+                        <div class="courses-details">
+                            <div class="line-1">
+                                <div class="course-name">Displacement, Velocity and Speed</div> <img class="star"
+                                    src="/dashboard/favourite.svg" alt="">
+                            </div>
+                            <div class="line-2 regular-course-label">
+                                Physics - 2
+                                <div class="pipe">|</div>
+                                Grade
+                                <div class="grade">6</div>
+                                <div class="plus">+3</div>
+                            </div>
+                            <div class="line-3 regular-course-label">
+                                <div class="number-line-2">2</div>
+                                Units
+                                <div class="number-line-2 lm">15</div>
+                                Lessons
+                                <div class="number-line-2 lm">20</div>
+                                Topics
+                            </div>
+                            <select name="" id="" class="course-class-input">
+                                <option value="">No class</option>
+                                <option value="">Mr. Frank's Class A</option>
+                                <option value="">Mr. Frank's Class B</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="courses-icons">
+                        <img src="/dashboard/preview.svg" alt="">
+                        <img src="/dashboard/manage course.svg" alt="">
+                        <img src="/dashboard/grade submissions.svg" alt="">
+                        <img src="/dashboard/reports.svg" alt="">
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course">
+                        <img src="/dashboard/imageMask-2.png" alt="" class="course-img">
+                        <div class="courses-details">
+                            <div class="line-1">
+                                <div class="course-name">Introduction to Biology: Micro organisms and how they affec...
+                                </div> <img class="star" src="/dashboard/favourite.svg" alt="">
+                            </div>
+                            <div class="line-2 regular-course-label">
+                                Biology
+                                <div class="pipe">|</div>
+                                Grade
+                                <div class="grade">4</div>
+                                <div class="plus">+1</div>
+                            </div>
+                            <div class="line-3 regular-course-label">
+                                <div class="number-line-2">5</div>
+                                Units
+                                <div class="number-line-2 lm">16</div>
+                                Lessons
+                                <div class="number-line-2 lm">22</div>
+                                Topics
+                            </div>
+                            <select name="" id="" class="course-class-input">
+                                <option value="">All Classes</option>
+                                <option value="">Mr. Frank's Class A</option>
+                                <option value="">Mr. Frank's Class B</option>
+                            </select>
+                            <div class="line-4 regular-course-label">
+                                <div>300 Students</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courses-icons">
+                        <img src="/dashboard/preview.svg" alt="">
+                        <img src="/dashboard/manage course.svg" alt="">
+                        <img src="/dashboard/grade submissions.svg" alt="">
+                        <img src="/dashboard/reports.svg" alt="">
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course">
+                        <img src="/dashboard/imageMask-3.png" alt="" class="course-img">
+                        <div class="courses-details">
+                            <div class="line-1">
+                                <div class="course-name">Introduction to High School Mathematics</div> <img class="star" src="/dashboard/favourite.svg" alt="">
+                            </div>
+                            <div class="line-2 regular-course-label">
+                                Mathematics
+                                <div class="pipe">|</div>
+                                Grade
+                                <div class="grade">8</div>
+                                <div class="plus">+3</div>
+                            </div>
+                            <select name="" id="" class="course-class-input">
+                                <option value="">Mr. Frank's Class A</option>
+                                <option value="">Mr. Frank's Class B</option>
+                            </select>
+                            <div class="line-4 regular-course-label">
+                                <div>44 Students</div>
+                                <div class="pipe">|</div>
+                                <div>14-Oct-2019</div>
+                                <div class="pipe">-</div>
+                                <div>20-Oct-2020</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courses-icons">
+                        <img src="/dashboard/preview.svg" alt="">
+                        <img src="/dashboard/manage course.svg" alt="">
+                        <img src="/dashboard/grade submissions.svg" alt="">
+                        <img src="/dashboard/reports.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="contact">About<div class="pipe">|</div>Contact Us</div>
+        <div class="footer">
+            <div class="footer-text">
+                <img src="/dashboard/logo used in footer.svg" alt="quantum">
+                <span class="pipe">|</span><span class="footer-text">Copyright © 2020-2021</span><span
+                    class="footer-text company-name">Zeus Systems Pvt. Ltd.</span><span class="footer-text">All rights
+                    reserved.</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
