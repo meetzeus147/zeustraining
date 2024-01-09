@@ -49,6 +49,18 @@ body {
     cursor: pointer;
 }
 
+.profile>img{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: #3FD28B 2px solid;
+}
+
+.menu{
+    display: none;
+}
+
 .dashboard {
     margin-left: auto;
 }
@@ -76,6 +88,7 @@ body {
 .courses-toggle:hover,
 .classes-toggle:hover {
     border-bottom: 4px solid #222222;
+    cursor: pointer;
 }
 
 .courses-nos,
@@ -91,6 +104,7 @@ body {
 
 .class-for-line {
     border-bottom: rgb(0, 0, 0, 0.12) 1px solid;
+    margin-bottom: 24px;
 }
 
 .filter-panel {
@@ -198,18 +212,27 @@ body {
 }
 
 .lm {
-    margin-right: 4px;
+    margin-left: 4px;
 }
 
 .courses-icons {
     display: flex;
     justify-content: space-between;
-    padding: 16px 0 9px 0;
+    padding: 16px 20px 9px 20px;
     border-top: rgb(0, 0, 0, 0.12) 1px solid;
-    margin: 0 24px 0 24px;
+    margin: auto 24px 0 24px;
 }
 
-.contact {
+.courses-icons>img:hover,
+.star:hover,
+.sort:hover,
+.contact:hover,
+.about:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.contact-div {
     justify-content: center;
     display: flex;
     font: normal normal bold 14px/18px 'Quicksand';
@@ -249,7 +272,19 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-    .courses-grid{
+    .courses-grid {
         grid-template-columns: 1fr;
+    }
+
+    .large-screen {
+        display: none;
+    }
+
+    .bell{
+        margin-left: auto;
+    }
+
+    .menu{
+        display: block;
     }
 }
