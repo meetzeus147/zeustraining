@@ -287,4 +287,8 @@ body {
     .menu{
         display: block;
     }
+
+    .footer-text{
+        flex-direction: column;
+    }
 }
