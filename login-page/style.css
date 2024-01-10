@@ -16,7 +16,6 @@ body {
   font-style: normal;
   font-variant: normal;
   font-weight: bold;
-  font-family: "Quicksand";
 }
 
 .header {
@@ -182,8 +181,14 @@ body {
   font-weight: bolder;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
   .main {
-    margin: 50px 140px auto 140px;
+    margin: 50px auto auto auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main {
+    margin: 50px 0 auto 0;
+    width: auto;
   }
 }/*# sourceMappingURL=style.css.map */
