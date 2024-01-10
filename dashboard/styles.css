@@ -192,6 +192,10 @@ body {
     color: rgb(0, 0, 0, 0.12);
 }
 
+.grade{
+    margin-left: 4px;
+}
+
 .plus {
     margin-left: 5px;
     color: #1F7A54;

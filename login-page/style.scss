@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'Quicksand';
+    font-display: optional;
+    src: url('/login-page/Quicksand-VariableFont_wght.woff2') format('woff2');
+}
+
+* {
+    margin: 0;
+}
+
+$bodybackground: #eeeeee;
+$headerbackground: #25313F;
+$bordercolor: #3AC7EC;
+$white: #ffffff;
+$black: #000000;
+$headingcolor: #222222;
+$labelcolor: #333333;
+$lightlabelcolor: #666666;
+$inputcolor: #1F7A54;
+$buttoncolor: #3FD28B;
+$pipe: #0000001F;
+$boxshadow: #0000003D;
+$footercolor: #E0E1E1;
+$footertext: #616161;
+$footerquantum: #1F2834;
+$primaryfont: 'Quicksand';
+$fontsize12: 12px;
+$fontsize14: 14px;
+$fontsize16: 16px;
+$fontsize20: 20px;
+$fontsize24: 24px;
+
+body {
+    background-color: $bodybackground;
+    font-family: $primaryfont;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    font-family: $primaryfont;
+}
+
+.header {
+    background: $headerbackground;
+    padding: 8px 30px;
+    display: flex;
+    border-bottom: 2px solid;
+    border-color: $bordercolor;
+
+    .header-title {
+        color: $white;
+        font-size: $fontsize20;
+        margin-left: 5px;
+    }
+}
+
+.main {
+    padding: 20px 36px 24px 36px;
+    margin: 50px auto auto auto;
+    width: 450px;
+    height: fit-content;
+    background: $white;
+    border-top: 4px solid;
+    border-color: $bordercolor;
+    border-radius: 2px 2px 0px 0px;
+
+    .form-title {
+        display: flex;
+        margin-bottom: 32px;
+
+        .title {
+            margin: 0 auto;
+            font-size: $fontsize24;
+            color: $headingcolor;
+        }
+    }
+
+    .school-type-select {
+        margin-bottom: 23px;
+        display: flex;
+        align-items: center;
+
+        .school-label {
+            margin-right: 32px;
+            text-align: left;
+            font-size: $fontsize16;
+            color: $labelcolor;
+        }
+
+        input[type="radio"] {
+            accent-color: $inputcolor;
+        }
+    }
+
+    .input-icon {
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+
+    .state-select-div {
+        margin-bottom: 36px;
+    }
+
+    .state-district-label {
+        text-align: left;
+        font-size: $fontsize12;
+        color: $lightlabelcolor;
+    }
+
+    .state-district-select {
+        width: 100%;
+        text-align: left;
+        font-size: $fontsize16;
+        color: $headingcolor;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $black;
+    }
+
+    .district-select-div {
+        margin-bottom: 56px;
+    }
+
+    .username-div {
+        margin-bottom: 33px;
+    }
+
+    .password-div {
+        margin-bottom: 24px;
+
+        .password-flex {
+            display: flex;
+            justify-content: space-between;
+
+            .state-input {
+                width: 100%;
+                border: none;
+                text-align: left;
+                font-size: $fontsize16;
+                color: $lightlabelcolor;
+            }
+        }
+    }
+
+    .username-password-input {
+        width: 100%;
+        text-align: left;
+        font-size: $fontsize16;
+        color: $lightlabelcolor;
+    }
+
+    .input-underline {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $black;
+    }
+
+    .forgot-labels {
+        text-align: right;
+        font-size: $fontsize14;
+        color: $inputcolor;
+        text-transform: uppercase;
+    }
+
+    .rememberme-div {
+        margin-bottom: 32px;
+        display: flex;
+        align-items: center;
+
+        input[type="checkbox"] {
+            accent-color: $inputcolor;
+        }
+    }
+
+    .submit {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+        width: 216px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        background: $buttoncolor 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 5px $boxshadow;
+    }
+}
+
+.contact {
+    align-items: end;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    font-size: $fontsize14;
+    color: $inputcolor;
+    margin: 16px;
+}
+
+.pipe {
+    color: $pipe;
+    margin: 0 5px;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    background-color: $footercolor;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin-bottom: 0%;
+
+    .footer-text {
+        font-size: $fontsize12;
+        letter-spacing: 0px;
+        color: $footertext;
+        margin: 0 5px;
+
+        .footer-quantum {
+            font-size: $fontsize14;
+            color: $footerquantum;
+        }
+
+        .company-name {
+            font-weight: bolder;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .main {
+        margin: 50px 140px auto 140px;
+    }
+}

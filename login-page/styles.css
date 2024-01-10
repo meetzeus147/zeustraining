@@ -32,7 +32,8 @@ body {
 
 .main {
     padding: 20px 36px 24px 36px;
-    margin: 50px 268px auto 268px;
+    margin: 50px auto auto auto;
+    width: 450px;
     height: fit-content;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border-top: 4px solid;
