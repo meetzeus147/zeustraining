@@ -23,6 +23,10 @@ $pipe: rgb(0, 0, 0, 0.12);
 $footercolor: #E0E1E1;
 $footertext: #616161;
 $footerquantum: #1F2834;
+$unreadalert: #ffffee;
+$boxshadow: #0000003d;
+$buttonhovercolor: #f3f3f3;
+$bordercolor: #ccc;
 $primaryfont: 'Quicksand';
 $fontsize12: 12px;
 $fontsize14: 14px;
@@ -54,7 +58,6 @@ body {
         text-align: right;
         letter-spacing: 0px;
         color: $buttoncolor;
-        text-transform: uppercase;
         margin: 0 16px;
         padding: 8px 0 4px 0;
         border-bottom: 4px solid $headerbackground;
@@ -72,6 +75,143 @@ body {
         object-fit: cover;
         border-radius: 100%;
         border: $buttoncolor 2px solid;
+    }
+
+    .nav {
+        .alerts-announcements {
+            opacity: 0;
+            visibility: hidden;
+            transition: visibility 0s, opacity 0.5s ease-in-out;
+            position: absolute;
+        }
+
+        &:hover {
+            .nav {
+                color: $headingcolor;
+                text-align: left;
+            }
+
+            .alerts-announcements {
+                visibility: visible;
+                opacity: 1;
+                width: 315px;
+                max-height: 580px;
+                z-index: 1;
+                position: absolute;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                right: 0;
+                top: 44px;
+                background-color: $white;
+                border: 1px solid $bordercolor;
+                box-shadow: 0px 13px 20px $boxshadow;
+                display: flex;
+                flex-direction: column;
+
+                .alert {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 16px;
+
+                    .alert-title {
+                        display: flex;
+                        margin-bottom: 8px;
+
+                        .alert-message {
+                            font-size: $fontsize14;
+                            color: $headingcolor;
+                            text-align: left;
+                        }
+
+                        .alert-read-status {
+                            margin-left: auto;
+                            color: $inputcolor;
+                        }
+                    }
+
+                    .label-class,
+                    .label-course,
+                    .label-files {
+                        text-align: left;
+                        font-size: $fontsize12;
+                        color: $footertext;
+                        margin-bottom: 8px;
+                        display: flex;
+                    }
+
+                    .alert-class,
+                    .alert-course {
+                        text-align: left;
+                        font-size: $fontsize12;
+                        color: $headingcolor;
+                        margin-bottom: 8px;
+                    }
+
+                    .alert-footer {
+                        display: flex;
+                        font-size: $fontsize12;
+                        font-weight: normal;
+                        color: $footertext;
+                    }
+
+                    .alert-timestamp {
+                        margin-left: auto;
+                        font-size: $fontsize12;
+                        font-weight: normal;
+                        color: $footertext;
+                    }
+                }
+
+                .alert-unread {
+                    background-color: $unreadalert;
+                }
+
+                .alert-show-button,
+                .announcement-show-button {
+                    position: sticky;
+                    bottom: 0;
+                    left: 0;
+                    text-align: center;
+                    background: $white;
+                    border: none;
+                    box-shadow: 0px 1px 6px $boxshadow;
+                    border-radius: 0px 0px 2px 2px;
+                    font-size: $fontsize14;
+                    color: $inputcolor;
+                }
+
+                .alert-show-button {
+                    padding: 15px;
+
+                    &:hover {
+                        background-color: $buttonhovercolor;
+                    }
+                }
+
+                .announcement-show-button,
+                .alert-show-button {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .announcement-show-button {
+                    padding: 15px;
+                }
+
+                .announcement-buttons {
+                    padding: 5px;
+                    width: 50%;
+
+                    &:hover {
+                        background-color: $buttonhovercolor;
+                    }
+                }
+
+                .seperator {
+                    border-right: $boxshadow 1px solid;
+                }
+            }
+        }
     }
 
     .menu {
@@ -170,6 +310,9 @@ body {
 
                 .course-img {
                     margin: 24px 16px 16px 24px;
+                    width: 132px;
+                    height: 157px;
+                    object-fit: fill;
                 }
 
                 .courses-details {
@@ -178,18 +321,26 @@ body {
                     width: 100%;
                     margin: 25px 24px 16px 0;
 
-                    .line-1,
-                    .line-2,
-                    .line-3,
-                    .line-4 {
+                    .line-1 {
                         display: flex;
-                        margin: 7px 0 0 0;
+                        margin: 0;
 
                         .course-name {
                             font-size: $fontsize16;
                             color: $headingcolor;
                             margin-right: auto;
                         }
+
+                        .nonfav {
+                            fill: $bodybackground;
+                        }
+                    }
+
+                    .line-2,
+                    .line-3,
+                    .line-4 {
+                        display: flex;
+                        margin: 7px 0 0 0;
 
                         .pipe {
                             margin: 0 5px;
@@ -218,10 +369,10 @@ body {
 
                     .course-class-input {
                         font-size: $fontsize16;
-                        color: $headingcolor;
+                        // color: $headingcolor;
                         border: none;
                         border-bottom: $linecolor;
-                        margin: 18px 0 13px 0;
+                        margin: 18px 0 0 0;
                     }
 
                     .regular-course-label {
@@ -237,6 +388,10 @@ body {
                 padding: 16px 20px 9px 20px;
                 border-top: $linecolor;
                 margin: auto 24px 0 24px;
+
+                .low-opacity {
+                    opacity: 0.4;
+                }
             }
 
             .courses-icons>img:hover,
@@ -304,6 +459,7 @@ body {
     }
 
     .header {
+
         .large-screen {
             display: none;
         }
@@ -314,6 +470,41 @@ body {
 
         .menu {
             display: contents;
+
+            .hamburger-menu {
+                opacity: 0;
+                visibility: hidden;
+                transition: visibility 0s, opacity 0.5s ease-in-out;
+                position: absolute;
+            }
+
+            &:hover {
+                .hamburger-menu {
+                    visibility: visible;
+                    opacity: 1;
+                    z-index: 1;
+                    position: absolute;
+                    right: 0;
+                    top: 44px;
+                    background-color: $white;
+                    color: $inputcolor;
+                    border: 1px solid $bordercolor;
+                    box-shadow: 0px 13px 20px $boxshadow;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .menuitem {
+                        padding: 16px 15px;
+                        width: 280px;
+                        text-align: left;
+
+                        &:hover {
+                            background-color: $buttonhovercolor;
+                        }
+                    }
+                }
+            }
         }
     }
 

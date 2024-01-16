@@ -32,7 +32,6 @@ body {
   text-align: right;
   letter-spacing: 0px;
   color: #3FD28B;
-  text-transform: uppercase;
   margin: 0 16px;
   padding: 8px 0 4px 0;
   border-bottom: 4px solid #25313F;
@@ -49,6 +48,119 @@ body {
      object-fit: cover;
   border-radius: 100%;
   border: #3FD28B 2px solid;
+}
+.header .nav .alerts-announcements {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+  position: absolute;
+}
+.header .nav:hover .nav {
+  color: #222222;
+  text-align: left;
+}
+.header .nav:hover .alerts-announcements {
+  visibility: visible;
+  opacity: 1;
+  width: 315px;
+  max-height: 580px;
+  z-index: 1;
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  right: 0;
+  top: 44px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.2392156863);
+  display: flex;
+  flex-direction: column;
+}
+.header .nav:hover .alerts-announcements .alert {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.header .nav:hover .alerts-announcements .alert .alert-title {
+  display: flex;
+  margin-bottom: 8px;
+}
+.header .nav:hover .alerts-announcements .alert .alert-title .alert-message {
+  font-size: 14px;
+  color: #222222;
+  text-align: left;
+}
+.header .nav:hover .alerts-announcements .alert .alert-title .alert-read-status {
+  margin-left: auto;
+  color: #1F7A54;
+}
+.header .nav:hover .alerts-announcements .alert .label-class,
+.header .nav:hover .alerts-announcements .alert .label-course,
+.header .nav:hover .alerts-announcements .alert .label-files {
+  text-align: left;
+  font-size: 12px;
+  color: #616161;
+  margin-bottom: 8px;
+  display: flex;
+}
+.header .nav:hover .alerts-announcements .alert .alert-class,
+.header .nav:hover .alerts-announcements .alert .alert-course {
+  text-align: left;
+  font-size: 12px;
+  color: #222222;
+  margin-bottom: 8px;
+}
+.header .nav:hover .alerts-announcements .alert .alert-footer {
+  display: flex;
+  font-size: 12px;
+  font-weight: normal;
+  color: #616161;
+}
+.header .nav:hover .alerts-announcements .alert .alert-timestamp {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: normal;
+  color: #616161;
+}
+.header .nav:hover .alerts-announcements .alert-unread {
+  background-color: #ffffee;
+}
+.header .nav:hover .alerts-announcements .alert-show-button,
+.header .nav:hover .alerts-announcements .announcement-show-button {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2392156863);
+  border-radius: 0px 0px 2px 2px;
+  font-size: 14px;
+  color: #1F7A54;
+}
+.header .nav:hover .alerts-announcements .alert-show-button {
+  padding: 15px;
+}
+.header .nav:hover .alerts-announcements .alert-show-button:hover {
+  background-color: #f3f3f3;
+}
+.header .nav:hover .alerts-announcements .announcement-show-button,
+.header .nav:hover .alerts-announcements .alert-show-button {
+  display: flex;
+  justify-content: center;
+}
+.header .nav:hover .alerts-announcements .announcement-show-button {
+  padding: 15px;
+}
+.header .nav:hover .alerts-announcements .announcement-buttons {
+  padding: 5px;
+  width: 50%;
+}
+.header .nav:hover .alerts-announcements .announcement-buttons:hover {
+  background-color: #f3f3f3;
+}
+.header .nav:hover .alerts-announcements .seperator {
+  border-right: rgba(0, 0, 0, 0.2392156863) 1px solid;
 }
 .header .menu {
   display: none;
@@ -138,6 +250,10 @@ body {
 }
 .main .courses-grid .course-card .course .course-img {
   margin: 24px 16px 16px 24px;
+  width: 132px;
+  height: 157px;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .main .courses-grid .course-card .course .courses-details {
   display: flex;
@@ -145,42 +261,41 @@ body {
   width: 100%;
   margin: 25px 24px 16px 0;
 }
-.main .courses-grid .course-card .course .courses-details .line-1,
+.main .courses-grid .course-card .course .courses-details .line-1 {
+  display: flex;
+  margin: 0;
+}
+.main .courses-grid .course-card .course .courses-details .line-1 .course-name {
+  font-size: 16px;
+  color: #222222;
+  margin-right: auto;
+}
+.main .courses-grid .course-card .course .courses-details .line-1 .nonfav {
+  fill: #eeeeee;
+}
 .main .courses-grid .course-card .course .courses-details .line-2,
 .main .courses-grid .course-card .course .courses-details .line-3,
 .main .courses-grid .course-card .course .courses-details .line-4 {
   display: flex;
   margin: 7px 0 0 0;
 }
-.main .courses-grid .course-card .course .courses-details .line-1 .course-name,
-.main .courses-grid .course-card .course .courses-details .line-2 .course-name,
-.main .courses-grid .course-card .course .courses-details .line-3 .course-name,
-.main .courses-grid .course-card .course .courses-details .line-4 .course-name {
-  font-size: 16px;
-  color: #222222;
-  margin-right: auto;
-}
-.main .courses-grid .course-card .course .courses-details .line-1 .pipe,
 .main .courses-grid .course-card .course .courses-details .line-2 .pipe,
 .main .courses-grid .course-card .course .courses-details .line-3 .pipe,
 .main .courses-grid .course-card .course .courses-details .line-4 .pipe {
   margin: 0 5px;
   color: rgba(0, 0, 0, 0.12);
 }
-.main .courses-grid .course-card .course .courses-details .line-1 .grade,
 .main .courses-grid .course-card .course .courses-details .line-2 .grade,
 .main .courses-grid .course-card .course .courses-details .line-3 .grade,
 .main .courses-grid .course-card .course .courses-details .line-4 .grade {
   margin-left: 4px;
 }
-.main .courses-grid .course-card .course .courses-details .line-1 .plus,
 .main .courses-grid .course-card .course .courses-details .line-2 .plus,
 .main .courses-grid .course-card .course .courses-details .line-3 .plus,
 .main .courses-grid .course-card .course .courses-details .line-4 .plus {
   margin-left: 5px;
   color: #1F7A54;
 }
-.main .courses-grid .course-card .course .courses-details .line-1 .number-line-2,
 .main .courses-grid .course-card .course .courses-details .line-2 .number-line-2,
 .main .courses-grid .course-card .course .courses-details .line-3 .number-line-2,
 .main .courses-grid .course-card .course .courses-details .line-4 .number-line-2 {
@@ -188,7 +303,6 @@ body {
   color: #222222;
   margin-right: 4px;
 }
-.main .courses-grid .course-card .course .courses-details .line-1 .lm,
 .main .courses-grid .course-card .course .courses-details .line-2 .lm,
 .main .courses-grid .course-card .course .courses-details .line-3 .lm,
 .main .courses-grid .course-card .course .courses-details .line-4 .lm {
@@ -196,10 +310,9 @@ body {
 }
 .main .courses-grid .course-card .course .courses-details .course-class-input {
   font-size: 16px;
-  color: #222222;
   border: none;
   border-bottom: rgba(0, 0, 0, 0.12) 1px solid;
-  margin: 18px 0 13px 0;
+  margin: 18px 0 0 0;
 }
 .main .courses-grid .course-card .course .courses-details .regular-course-label {
   font-size: 12px;
@@ -211,6 +324,9 @@ body {
   padding: 16px 20px 9px 20px;
   border-top: rgba(0, 0, 0, 0.12) 1px solid;
   margin: auto 24px 0 24px;
+}
+.main .courses-grid .course-card .courses-icons .low-opacity {
+  opacity: 0.4;
 }
 .main .courses-grid .course-card .courses-icons > img:hover,
 .main .courses-grid .course-card .star:hover,
@@ -270,6 +386,35 @@ body {
   }
   .header .menu {
     display: contents;
+  }
+  .header .menu .hamburger-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+    position: absolute;
+  }
+  .header .menu:hover .hamburger-menu {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 44px;
+    background-color: #ffffff;
+    color: #1F7A54;
+    border: 1px solid #ccc;
+    box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.2392156863);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header .menu:hover .hamburger-menu .menuitem {
+    padding: 16px 15px;
+    width: 280px;
+    text-align: left;
+  }
+  .header .menu:hover .hamburger-menu .menuitem:hover {
+    background-color: #f3f3f3;
   }
   .footer .footer-text {
     flex-direction: column;
