@@ -41,12 +41,28 @@ const alertdata = [
         "message": "License for Introduction to Algebra has been assigned to your school",
         "timestamp": "15-Sep-2018 at 07:21 pm",
         "read": false
+    },
+    {
+        "message": "Lesson 3 Practice Worksheet overdue for Sam Diego",
+        "course": "Advanced Mathematics",
+        "timestamp": "15-Sep-2018 at 07:21 pm",
+        "read": true
+    },
+    {
+        "message": "License for Introduction to Algebra has been assigned to your school",
+        "timestamp": "15-Sep-2018 at 07:21 pm",
+        "read": false
+    },
+    {
+        "message": "License for Introduction to Algebra has been assigned to your school",
+        "timestamp": "15-Sep-2018 at 07:21 pm",
+        "read": false
     }
 ]
 
 function createAlerts(alertdata) {
 
-    let alerts = document.querySelector('.alert-cont');
+    let alerts = document.querySelector('.alerts-announcements');
 
     let alert = document.createElement('div');
     alert.classList.add('alert');
@@ -70,3 +86,11 @@ function createAlerts(alertdata) {
 alertdata.forEach(function (alert) {
     createAlerts(alert);
 });
+
+let alerts = document.querySelector('.alerts-announcements');
+
+let button = document.createElement('div');
+button.classList.add('alert-show-button');
+button.innerHTML = 'Show All'
+
+alerts.appendChild(button);

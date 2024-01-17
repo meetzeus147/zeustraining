@@ -52,6 +52,10 @@ body {
 .header {
     background: $headerbackground;
     padding: 0 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     display: flex;
 
     .nav {
@@ -79,10 +83,23 @@ body {
 
     .nav {
         .alerts-announcements {
-            opacity: 0;
-            visibility: hidden;
-            transition: visibility 0s, opacity 0.5s ease-in-out;
+            max-height: 0;
+            z-index: 1;
+            overflow: hidden;
             position: absolute;
+            transition: max-height 0.2s ease-in-out;
+            width: 315px;
+            right: 0;
+            top: 44px;
+
+            .alert {
+                display: none;
+            }
+
+            .alert-show-button,
+            .announcement-show-button {
+                display: none;
+            }
         }
 
         &:hover {
@@ -92,8 +109,6 @@ body {
             }
 
             .alerts-announcements {
-                visibility: visible;
-                opacity: 1;
                 width: 315px;
                 max-height: 580px;
                 z-index: 1;
@@ -225,6 +240,7 @@ body {
 
 .main {
     margin: 24px;
+    margin-top: 64px;
 
     .course-class-toggle {
         background-color: $togglecolor;
@@ -469,19 +485,24 @@ body {
         }
 
         .menu {
-            display: contents;
+            display: block;
 
             .hamburger-menu {
-                opacity: 0;
-                visibility: hidden;
-                transition: visibility 0s, opacity 0.5s ease-in-out;
+                z-index: 1;
+                overflow: hidden;
                 position: absolute;
+                top: 44px;
+                right: 0;
+
+                .menuitem {
+                    width: 0;
+                    visibility: hidden;
+                    transition: width 0.2s ease-in-out;
+                }
             }
 
             &:hover {
                 .hamburger-menu {
-                    visibility: visible;
-                    opacity: 1;
                     z-index: 1;
                     position: absolute;
                     right: 0;
@@ -498,6 +519,7 @@ body {
                         padding: 16px 15px;
                         width: 280px;
                         text-align: left;
+                        visibility: visible;
 
                         &:hover {
                             background-color: $buttonhovercolor;

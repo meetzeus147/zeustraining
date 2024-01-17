@@ -42,12 +42,9 @@ const anndata = [
     }
 ]
 
-
+let announcements = document.getElementById('ann');
 
 function createAnnouncement(alertdata) {
-
-    let alerts = document.querySelector('.announcement-cont');
-
     let alert = document.createElement('div');
     alert.classList.add('alert');
     if(alertdata.read === false){
@@ -65,10 +62,27 @@ function createAnnouncement(alertdata) {
         ${ alertdata.files ? `<div class="label-files">📎 <div class="alert-files">${alertdata.files}</div> files are attached</div>`:``}
         ${ alertdata.timestamp ? `<div class="alert-timestamp">${alertdata.timestamp}</div>` : ``}</div>`
 
-    alerts.appendChild(alert);
+        announcements.appendChild(alert);
 
 }
 
 anndata.forEach(function (announcement) {
     createAnnouncement(announcement);
 });
+
+let buttons = document.createElement('div');
+buttons.classList.add('announcement-show-button');
+
+let showallbutton = document.createElement('div');
+showallbutton.classList.add('announcement-buttons');
+showallbutton.classList.add('seperator');
+showallbutton.innerHTML = 'Show All'
+
+let createnewbutton = document.createElement('div');
+createnewbutton.classList.add('announcement-buttons');
+createnewbutton.innerHTML = 'Create New'
+
+buttons.appendChild(showallbutton);
+buttons.appendChild(createnewbutton);
+
+announcements.appendChild(buttons);
